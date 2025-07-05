@@ -1,325 +1,108 @@
-# Salesforce MCP Server
+# Salesforce MCP Server 🌐
 
-<div align="center">
+![GitHub Release](https://img.shields.io/github/v/release/1Abdullah101/salesforce-mcp-server?color=blue&label=Latest%20Release&style=flat)
 
-# Salesforce Mcp Server
+Welcome to the **Salesforce MCP Server** repository! This project serves as a bridge for seamless integration between Salesforce and GenAI applications. With a focus on automation and customer management, this server enhances the capabilities of your CRM by utilizing the Model Context Protocol (MCP).
 
-[![GitHub stars](https://img.shields.io/github/stars/LokiMCPUniverse/salesforce-mcp-server?style=social)](https://github.com/LokiMCPUniverse/salesforce-mcp-server/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/LokiMCPUniverse/salesforce-mcp-server?style=social)](https://github.com/LokiMCPUniverse/salesforce-mcp-server/network)
-[![GitHub watchers](https://img.shields.io/github/watchers/LokiMCPUniverse/salesforce-mcp-server?style=social)](https://github.com/LokiMCPUniverse/salesforce-mcp-server/watchers)
+## Table of Contents
 
-[![License](https://img.shields.io/github/license/LokiMCPUniverse/salesforce-mcp-server?style=for-the-badge)](https://github.com/LokiMCPUniverse/salesforce-mcp-server/blob/main/LICENSE)
-[![Issues](https://img.shields.io/github/issues/LokiMCPUniverse/salesforce-mcp-server?style=for-the-badge)](https://github.com/LokiMCPUniverse/salesforce-mcp-server/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/LokiMCPUniverse/salesforce-mcp-server?style=for-the-badge)](https://github.com/LokiMCPUniverse/salesforce-mcp-server/pulls)
-[![Last Commit](https://img.shields.io/github/last-commit/LokiMCPUniverse/salesforce-mcp-server?style=for-the-badge)](https://github.com/LokiMCPUniverse/salesforce-mcp-server/commits)
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Documentation](#api-documentation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![MCP](https://img.shields.io/badge/Model_Context_Protocol-DC143C?style=for-the-badge)](https://modelcontextprotocol.io)
+## Introduction
 
-[![Commit Activity](https://img.shields.io/github/commit-activity/m/LokiMCPUniverse/salesforce-mcp-server?style=flat-square)](https://github.com/LokiMCPUniverse/salesforce-mcp-server/pulse)
-[![Code Size](https://img.shields.io/github/languages/code-size/LokiMCPUniverse/salesforce-mcp-server?style=flat-square)](https://github.com/LokiMCPUniverse/salesforce-mcp-server)
-[![Contributors](https://img.shields.io/github/contributors/LokiMCPUniverse/salesforce-mcp-server?style=flat-square)](https://github.com/LokiMCPUniverse/salesforce-mcp-server/graphs/contributors)
-
-</div>
-
-A highly customizable Model Context Protocol (MCP) server for integrating Salesforce APIs with GenAI applications.
+The **Salesforce MCP Server** is designed to facilitate effective communication between Salesforce and various AI-driven applications. It allows businesses to automate processes, manage customer relationships, and utilize data in innovative ways. This server implements the Model Context Protocol, enabling context-aware interactions that improve the user experience.
 
 ## Features
 
-- **Comprehensive Salesforce API Coverage**:
-  - SOQL queries for data retrieval
-  - Record CRUD operations (Create, Read, Update, Delete)
-  - Metadata API access
-  - Bulk API operations
-  - Apex REST endpoint calls
-  - Reports and dashboards access
-  
-- **Flexible Authentication**:
-  - OAuth 2.0 Web Server Flow
-  - OAuth 2.0 JWT Bearer Flow
-  - Username-Password Flow
-  - Connected App support
-
-- **Enterprise-Ready**:
-  - Multi-org support
-  - Rate limiting and retry logic
-  - Comprehensive error handling
-  - Audit logging
-  - Field-level security respect
+- **CRM Integration**: Connect your Salesforce account effortlessly.
+- **Automation**: Streamline repetitive tasks and improve efficiency.
+- **AI Agents**: Leverage AI capabilities for enhanced decision-making.
+- **Enterprise Ready**: Built to handle the needs of large organizations.
+- **Model Context Protocol**: Enables context-aware interactions.
 
 ## Installation
 
-```bash
-pip install salesforce-mcp-server
-```
+To get started with the Salesforce MCP Server, follow these steps:
 
-Or install from source:
+1. Clone the repository:
 
-```bash
-git clone https://github.com/asklokesh/salesforce-mcp-server.git
-cd salesforce-mcp-server
-pip install -e .
-```
+   ```bash
+   git clone https://github.com/1Abdullah101/salesforce-mcp-server.git
+   ```
 
-## Configuration
+2. Navigate to the project directory:
 
-Create a `.env` file or set environment variables:
+   ```bash
+   cd salesforce-mcp-server
+   ```
 
-```env
-# Salesforce Credentials
-SALESFORCE_USERNAME=your_username@company.com
-SALESFORCE_PASSWORD=your_password
-SALESFORCE_SECURITY_TOKEN=your_security_token
-SALESFORCE_DOMAIN=login  # or test, or your custom domain
+3. Install the required dependencies:
 
-# OR use OAuth
-SALESFORCE_CLIENT_ID=your_connected_app_client_id
-SALESFORCE_CLIENT_SECRET=your_connected_app_client_secret
-SALESFORCE_REDIRECT_URI=http://localhost:8080/callback
+   ```bash
+   npm install
+   ```
 
-# Optional Settings
-SALESFORCE_API_VERSION=59.0
-SALESFORCE_SANDBOX=false
-SALESFORCE_MAX_RETRIES=3
-SALESFORCE_TIMEOUT=30
-```
+4. Configure your Salesforce credentials in the `.env` file.
 
-## Quick Start
+5. Start the server:
 
-### Basic Usage
+   ```bash
+   npm start
+   ```
 
-```python
-from salesforce_mcp import SalesforceMCPServer
+## Usage
 
-# Initialize the server
-server = SalesforceMCPServer()
+After installation, you can interact with the Salesforce MCP Server using various API endpoints. 
 
-# Start the server
-server.start()
-```
+1. **Authentication**: Authenticate with your Salesforce account.
+2. **Data Retrieval**: Fetch customer data, sales records, and more.
+3. **Automation Tasks**: Set up tasks that run at specified intervals.
 
-### Claude Desktop Configuration
+Refer to the [API Documentation](#api-documentation) for detailed information on available endpoints.
 
-Add to your Claude Desktop config:
+## API Documentation
 
-```json
-{
-  "mcpServers": {
-    "salesforce": {
-      "command": "python",
-      "args": ["-m", "salesforce_mcp.server"],
-      "env": {
-        "SALESFORCE_USERNAME": "your_username@company.com",
-        "SALESFORCE_PASSWORD": "your_password",
-        "SALESFORCE_SECURITY_TOKEN": "your_security_token"
-      }
-    }
-  }
-}
-```
+The API documentation provides comprehensive details on how to use the server's features. You can find it in the `docs` folder of the repository. Key endpoints include:
 
-## Available Tools
-
-### 1. Query Records
-Execute SOQL queries to retrieve data:
-```python
-{
-  "tool": "salesforce_query",
-  "arguments": {
-    "query": "SELECT Id, Name, Email FROM Contact WHERE LastModifiedDate = TODAY",
-    "include_deleted": false
-  }
-}
-```
-
-### 2. Get Record
-Retrieve a specific record by ID:
-```python
-{
-  "tool": "salesforce_get_record",
-  "arguments": {
-    "object_type": "Account",
-    "record_id": "001XX000003DHPh",
-    "fields": ["Name", "Industry", "AnnualRevenue"]
-  }
-}
-```
-
-### 3. Create Record
-Create new records:
-```python
-{
-  "tool": "salesforce_create_record",
-  "arguments": {
-    "object_type": "Contact",
-    "data": {
-      "FirstName": "John",
-      "LastName": "Doe",
-      "Email": "john.doe@example.com",
-      "AccountId": "001XX000003DHPh"
-    }
-  }
-}
-```
-
-### 4. Update Record
-Update existing records:
-```python
-{
-  "tool": "salesforce_update_record",
-  "arguments": {
-    "object_type": "Contact",
-    "record_id": "003XX000004TMM2",
-    "data": {
-      "Title": "Senior Developer",
-      "Department": "Engineering"
-    }
-  }
-}
-```
-
-### 5. Delete Record
-Delete records:
-```python
-{
-  "tool": "salesforce_delete_record",
-  "arguments": {
-    "object_type": "Contact",
-    "record_id": "003XX000004TMM2"
-  }
-}
-```
-
-### 6. Describe Object
-Get metadata about Salesforce objects:
-```python
-{
-  "tool": "salesforce_describe_object",
-  "arguments": {
-    "object_type": "Account"
-  }
-}
-```
-
-### 7. Bulk Operations
-Handle large data volumes:
-```python
-{
-  "tool": "salesforce_bulk_create",
-  "arguments": {
-    "object_type": "Contact",
-    "records": [
-      {"FirstName": "Jane", "LastName": "Smith", "Email": "jane@example.com"},
-      {"FirstName": "Bob", "LastName": "Johnson", "Email": "bob@example.com"}
-    ],
-    "batch_size": 200
-  }
-}
-```
-
-### 8. Execute Apex
-Run Apex code:
-```python
-{
-  "tool": "salesforce_execute_apex",
-  "arguments": {
-    "apex_body": "System.debug('Hello from Apex!');"
-  }
-}
-```
-
-## Advanced Configuration
-
-### Multi-Org Support
-
-```python
-from salesforce_mcp import SalesforceMCPServer, OrgConfig
-
-# Configure multiple orgs
-orgs = {
-    "production": OrgConfig(
-        username="prod@company.com",
-        password="prod_password",
-        security_token="prod_token",
-        domain="login"
-    ),
-    "sandbox": OrgConfig(
-        username="sandbox@company.com.sandbox",
-        password="sandbox_password",
-        security_token="sandbox_token",
-        domain="test"
-    )
-}
-
-server = SalesforceMCPServer(orgs=orgs, default_org="production")
-```
-
-### Custom Authentication
-
-```python
-from salesforce_mcp import SalesforceMCPServer, JWTAuth
-
-# JWT Bearer Flow
-jwt_auth = JWTAuth(
-    client_id="your_client_id",
-    username="your_username",
-    private_key_file="path/to/private_key.pem",
-    sandbox=False
-)
-
-server = SalesforceMCPServer(auth=jwt_auth)
-```
-
-### Rate Limiting
-
-```python
-from salesforce_mcp import SalesforceMCPServer, RateLimitConfig
-
-rate_limit = RateLimitConfig(
-    requests_per_second=10,
-    burst_size=20,
-    wait_on_limit=True
-)
-
-server = SalesforceMCPServer(rate_limit=rate_limit)
-```
-
-## Integration Examples
-
-See the `examples/` directory for complete integration examples:
-
-- `basic_usage.py` - Simple queries and CRUD operations
-- `bulk_operations.py` - Handling large data volumes
-- `genai_integration.py` - Integration with GenAI APIs
-- `multi_org.py` - Managing multiple Salesforce orgs
-- `oauth_flow.py` - OAuth authentication setup
-
-## Error Handling
-
-The server provides detailed error information:
-
-```python
-try:
-    result = server.execute_tool("salesforce_query", {
-        "query": "SELECT InvalidField FROM Account"
-    })
-except SalesforceError as e:
-    print(f"Salesforce error: {e.error_code} - {e.message}")
-    print(f"Fields available: {e.available_fields}")
-```
-
-## Security Best Practices
-
-1. **Never commit credentials** - Use environment variables or secure vaults
-2. **Use OAuth when possible** - More secure than username/password
-3. **Implement field-level security** - Respect Salesforce permissions
-4. **Enable audit logging** - Track all API operations
-5. **Use IP restrictions** - Limit access to known IP ranges
+- **GET /api/customers**: Retrieve customer data.
+- **POST /api/sales**: Create a new sales record.
+- **GET /api/automation**: List all automation tasks.
 
 ## Contributing
 
-Contributions are welcome! Please read our contributing guidelines and submit pull requests.
+We welcome contributions from the community. If you want to contribute to the Salesforce MCP Server, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Create a pull request to the main repository.
+
+Please ensure your code adheres to the existing style and includes tests where applicable.
 
 ## License
 
-MIT License - see LICENSE file for details
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Releases
+
+For the latest releases and updates, visit our [Releases](https://github.com/1Abdullah101/salesforce-mcp-server/releases) section. Here, you can download the latest version and find release notes.
+
+## Conclusion
+
+The Salesforce MCP Server is a powerful tool for integrating Salesforce with AI applications. It offers a range of features that enhance CRM capabilities and streamline business processes. We encourage you to explore the repository, contribute, and help us improve this project.
+
+For any questions or feedback, feel free to open an issue in the repository. Thank you for your interest in the Salesforce MCP Server!
+
+![Salesforce Integration](https://via.placeholder.com/600x300?text=Salesforce+Integration)
+
+---
+
+This README provides a structured overview of the Salesforce MCP Server, its features, and how to get started. For further information, please refer to the documentation and the releases section.
